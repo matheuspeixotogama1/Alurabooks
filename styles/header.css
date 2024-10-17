@@ -2,9 +2,52 @@
     width: 24px;
     height: 24px;
     background-image: url(../img/Menu.svg);
+    background-repeat:no-repeat;
+    background-position: center;
     display: inline-block;
 }
 
 .cabeçalho{
     background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-content: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.Lista-menu{
+    display: none;
+    position: obsolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__botão:checked~.Lista-menu__item{
+    display:block;
+}
+
+.Lista-menu__titulo, .Lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.Lista-menu__titulo{
+    color: var(--laranja);
+}
+
+.Lista-menu__link{
+    background:var(--azul-degrade) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
 }
